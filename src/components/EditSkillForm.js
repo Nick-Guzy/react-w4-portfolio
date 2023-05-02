@@ -1,0 +1,33 @@
+import React from "react";
+import ReusableSkillForm from "./ReusableSkillForm";
+import PropTypes from "prop-types";
+
+function EditSkillForm (props) {
+  const { skill } = props;
+
+  function handleEditSkillFormSubmission(event) {
+    event.preventDefault();
+    props.onEditSkill({
+      title: PropTypes.string,
+      yearsOfEperience: PropTypes.string,
+      description: PropTypes.string,
+      id: skill.id,
+      whenSkillClicked: PropTypes.func
+    });
+  }
+
+  return (
+    <React.Fragment>
+      <ReusableSkillForm 
+        formSubmissionHandler={handleEditSkillFormSubmission} 
+        buttonText="Update Skill" />
+    </React.Fragment>
+  );
+}
+
+EditSkillForm.propTypes = {
+  onEditSkill: PropTypes.func,
+  skill: PropTypes.object
+};
+
+export default EditSkillForm;

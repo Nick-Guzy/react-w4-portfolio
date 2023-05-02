@@ -1,0 +1,34 @@
+import React from "react";
+import PropTypes from "prop-types";
+
+function ReusableProjectForm(props) {
+  return (
+    <React.Fragment>
+      <form onSubmit={props.formSubmissionHandler}>
+        <input
+          type='text'
+          name='title'
+          placeholder='Project Title' />
+        <input
+          type='text'
+          name='link'
+          placeholder='Project URL' />
+        <input
+          type='text'
+          name='date'
+          placeholder='Published Date' />
+        <textarea
+          name='description'
+          placeholder='Describe your project.' />
+        <button type='submit'>{props.buttonText}</button>
+      </form>
+    </React.Fragment>
+  );
+}
+
+ReusableProjectForm.propTypes = {
+  formSubmissionHandler: PropTypes.func,
+  buttonText: PropTypes.string
+};
+
+export default ReusableProjectForm;
