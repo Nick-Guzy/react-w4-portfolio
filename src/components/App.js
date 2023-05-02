@@ -12,6 +12,7 @@ const MultiEleRoute = () => {
       <ProjectControl />
       <SkillControl />
       <BioControl />
+      <a href="/sign-in">Account Management</a>
     </div>
   )
 }
@@ -25,6 +26,7 @@ function App(){
         <Route path="/" element={<MultiEleRoute />}/>
       </Routes>
     </Router>
+    
   );
 }
 

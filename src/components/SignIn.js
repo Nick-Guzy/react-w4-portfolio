@@ -72,6 +72,8 @@ function SignIn() {
         <button type='submit'>Sign in</button>
       </form>
 
+      <a href="/">Home</a>
+
       <h1>Sign Out</h1>
       {signOutSuccess}
       <br />
