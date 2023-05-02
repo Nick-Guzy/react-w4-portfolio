@@ -7,14 +7,15 @@ function EditBioForm (props) {
 
   function handleEditBioFormSubmission(event) {
     event.preventDefault();
-    props.onEditBio({
-      name: PropTypes.string,
-      age: PropTypes.string,
-      contact: PropTypes.string,
-      description: PropTypes.string,
+    const updatedBio = { 
+      name: event.target.name.value,
+      age: event.target.age.value,
+      contact: event.target.contact.value,
+      description: event.target.description.value,
       id: bio.id,
       whenBioClicked: PropTypes.func
-    });
+    };
+    props.onEditBio(updatedBio);
   }
 
   return (
@@ -28,7 +29,7 @@ function EditBioForm (props) {
 
 EditBioForm.propTypes = {
   onEditBio: PropTypes.func,
-  project: PropTypes.object
+  bio: PropTypes.object
 };
 
 export default EditBioForm;

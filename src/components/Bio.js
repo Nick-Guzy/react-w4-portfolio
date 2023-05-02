@@ -20,9 +20,9 @@ Bio.propTypes = {
   name: PropTypes.string,
   description: PropTypes.string,
   contact: PropTypes.string,
+  age: PropTypes.string,
   id: PropTypes.string,
-  whenBioClicked: PropTypes.func,
-  age: PropTypes.string
+  whenBioClicked: PropTypes.func
 }
 
 export default Bio;

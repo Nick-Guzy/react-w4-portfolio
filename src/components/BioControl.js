@@ -91,11 +91,11 @@ function BioControl() {
     if (error) {
       currentlyVisibleState = <p>There was an error: {error}</p>
     } else if (editing) {
-      currentlyVisibleState = <EditBioForm Bio={selectedBio} onEditBio={handleEditingBioInList} />
+      currentlyVisibleState = <EditBioForm bio={selectedBio} onEditBio={handleEditingBioInList} />
       buttonText = "Return to Bio List";
     } else if (selectedBio != null) {
       currentlyVisibleState = <BioDetail
-      Bio={selectedBio}
+      bio={selectedBio}
         onClickingDelete={handleDeletingBio}
         onClickingEdit={handleEditClick} />
       buttonText = "Return to Bio List";

@@ -7,14 +7,14 @@ function EditProjectForm (props) {
 
   function handleEditProjectFormSubmission(event) {
     event.preventDefault();
-    props.onEditProject({
-      title: PropTypes.string,
-      link: PropTypes.string,
-      description: PropTypes.string,
-      date: PropTypes.string,
+    const updatedProject = {
+      title: event.target.title.value,
+      link: event.target.link.value,
+      description: event.target.description.value,
+      date: event.target.date.value,
       id: project.id,
-      whenProjectClicked: PropTypes.func
-    });
+    };
+    props.onEditProject(updatedProject);
   }
 
   return (
