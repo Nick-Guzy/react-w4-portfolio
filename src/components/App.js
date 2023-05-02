@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import ProjectControl from "./ProjectControl";
 import SkillControl from "./SkillControl";
+import BioControl from "./BioControl"
 import SignIn from "./SignIn";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -10,6 +11,7 @@ const MultiEleRoute = () => {
     <div>
       <ProjectControl />
       <SkillControl />
+      <BioControl />
     </div>
   )
 }

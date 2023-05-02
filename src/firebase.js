@@ -15,5 +15,6 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const projectDB = getFirestore(app);
 const skillDB = getFirestore(app);
+const bioDB = getFirestore(app)
 
-export { projectDB, skillDB, auth};
+export { projectDB, skillDB, bioDB, auth};
