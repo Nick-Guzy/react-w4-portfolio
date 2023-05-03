@@ -21,6 +21,7 @@ Project.propTypes = {
   description: PropTypes.string,
   date: PropTypes.string,
   id: PropTypes.string,
+  // uid: PropTypes.string,
   whenProjectClicked: PropTypes.func
 }
 

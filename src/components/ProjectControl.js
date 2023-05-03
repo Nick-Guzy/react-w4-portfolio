@@ -25,7 +25,8 @@ function ProjectControl() {
             link: doc.data().link,
             description: doc.data().description,
             date: doc.data().date,
-            id: doc.id
+            id: doc.id,
+            // uid: auth.currentUser.id
           });
         });
         setMainProjectList(projects);
